@@ -8,7 +8,9 @@ button.onclick=function(){
     var request=new XMLHttpRequest();
     //response
     request.onreadystatechange = function(){
-        
+        if(request.readystate===XMLHttpRequest.DONE){
+            
+        }
     };
     //rendering
     counter=counter+1;
