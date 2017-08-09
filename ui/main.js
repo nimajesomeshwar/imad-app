@@ -3,7 +3,7 @@ console.log('Successfully');
 
 var button=document.getElementById('counter');
 button.onclick=function(){
-    //request
+    //create request
     var request=new XMLHttpRequest();
     //response
     request.onreadystatechange = function(){
@@ -15,6 +15,7 @@ button.onclick=function(){
             }
         }
     };
-    //rendering
+    //make request
+    request.open('GET','http://nimajesomeshwar.imad.hasura-app.io/',true);
     
 };
