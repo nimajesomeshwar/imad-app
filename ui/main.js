@@ -17,5 +17,5 @@ button.onclick=function(){
     };
     //make request
     request.open('GET','http://nimajesomeshwar.imad.hasura-app.io/',true);
-    
+    request.send(null);
 };
