@@ -56,7 +56,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var pool=new Pool(config);
+var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     //select req
     pool.query('SELECT * FROM test',function(err,result){
