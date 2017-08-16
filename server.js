@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 
 //reducing code
 var articles = {
-'article-one ': {
+'article-one': {
     title:'Article-One|Som',
     heading:'Article-One',
     date:'August 15',
