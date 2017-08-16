@@ -30,11 +30,11 @@ var articleOne={
          </div>`
 };
 
-function createTemplate(dta){
-    var title= data.title;
-    var date= data.date;
-    var heading= data.heading;
-    var content= data.heading;
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.heading;
 var htmlTemplate=`<html>
       <head>
           <title> ${title} </title>
