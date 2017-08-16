@@ -40,7 +40,29 @@ var articleOne={
           <p>Single-page applications are more application-like because they reject the more typical web paradigm of moving between distinct pages with different URLs. Single-page frameworks like Sencha Touch and AngularJS might be used to speed development of such a web app for a mobile platform.</p>
          </div>`
 };
+var htmlTemplate=`<html>
+      <head>
+          <title> ${title} </title>
+           <link href="/ui/style.css" rel="stylesheet" />
+          <meta name="viewpart" content="width-device-width, initial-scale-1"/>
 
+
+      </head>
+      <body>
+          <div class="container">
+          <div>
+          <a href="/">Home</a>
+          </div>
+          <hr/>
+          <h3> ${heading} </h3>
+          <div>
+               <p>${date}</p>
+          </div>
+                ${content}
+         </div>
+      </body>
+</html>
+`;
 
 var counter=0;
 app.get('/counter', function(req,res){
