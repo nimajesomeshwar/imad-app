@@ -69,6 +69,7 @@ var htmlTemplate=`<html>
       </body>
 </html>
 `;
+return htmlTemplate;
 }
 
 var counter=0;
