@@ -92,6 +92,20 @@ var htmlTemplate=`<html>
 return htmlTemplate;
 }
 
+var pool = new Pool(config);
+app.get('/test-db', function (req, res) {
+    //select req
+    pool.query('SELECT * FROM test',function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        } else{
+            res.send(JSON.stringify(result.rows));
+        }
+    });
+    //return response
+
+});
+
 var names=[];
 app.get('/submit-name', function(req,res){
     //request to server
@@ -127,19 +141,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var pool = new Pool(config);
-app.get('/test-db', function (req, res) {
-    //select req
-    pool.query('SELECT * FROM test',function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
-        } else{
-            res.send(JSON.stringify(result.rows));
-        }
-    });
-    //return response
 
-});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
