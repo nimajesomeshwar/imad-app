@@ -26,10 +26,11 @@ padding-top: 60px;
 padding-left: 20px;
 padding-right: 20px;
 background-color: lightyellow;
+height: 100%
             }
             
                 
-body, html {height: 100%}
+body, html {}
 .bgimg {
     background-image: url('/w3images/forestbridge.jpg');
     min-height: 100%;
