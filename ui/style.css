@@ -26,14 +26,11 @@ padding-top: 60px;
 padding-left: 20px;
 padding-right: 20px;
 background-color: lightyellow;
-height: 100%
-            }
-            
-                
-body, html {}
-.bgimg {
-    background-image: url('/w3images/forestbridge.jpg');
+height: 100%;
+ background-image: url('/w3images/forestbridge.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
-}
+            }
+            
+                
