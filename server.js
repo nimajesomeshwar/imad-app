@@ -54,7 +54,7 @@ return htmlTemplate;
 
 function hash(input,salt){
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
 }
 
 app.post('/create-user',function(req,res){
@@ -81,6 +81,7 @@ app.post('/login',function(req,res){
          res.send(403).send('Username/Password is invalid');   
         }
         else{
+            var dbString=result.rows[0].password;
             res.send('User is successfully created: '+username);
         }   
     });
