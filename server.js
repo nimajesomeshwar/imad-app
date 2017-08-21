@@ -71,7 +71,7 @@ app.post('/create-user',function(req,res){
     });
 });
 
-/*app.post('/login',function(req,res){
+app.post('/login',function(req,res){
     var username=req.body.username;
     var password=req.body.password;
     pool.query('SELECT * FROM "user" username=$1' ,[username],function(err,result){
@@ -85,7 +85,7 @@ app.post('/create-user',function(req,res){
             res.send('User is successfully created: '+username);
         }   
     });
-});*/
+});
 
 app.get('/hash/:input',function(req,res){
    var hashedString = hash(req.params.input,'This-is-random-string'); 
