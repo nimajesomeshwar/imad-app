@@ -49,6 +49,13 @@ var htmlTemplate=`<html>
 return htmlTemplate;
 }
 
+
+app.get('/hash/:input',function(req,res){
+   var hashedString = hash(req.params.input); 
+});
+
+
+
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     //select req
